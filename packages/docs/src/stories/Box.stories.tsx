@@ -1,4 +1,4 @@
-import { Box, BoxProps } from '@galaxy-ui/react'
+import { Box, BoxProps, Text } from '@galaxy-ui/react'
 import { StoryObj, Meta } from '@storybook/react'
 
 // configuração global
@@ -8,7 +8,7 @@ export default {
   args: {
     children: (
       <>
-        <span>Testando box</span>
+        <Text>Testando box</Text>
       </>
     )
   },
