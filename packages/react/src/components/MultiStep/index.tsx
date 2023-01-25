@@ -22,6 +22,8 @@ export function MultiStep({ size, currentStep = 1 }: MultiStepProps) {
   )
 }
 
+MultiStep.displayName = 'MultiStep'
+
 /*
   {Array.from({ length: 4 }, (_, i) => i + 1)} -> retorna [1, 2, 3, 4]
 */
