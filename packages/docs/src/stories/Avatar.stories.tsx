@@ -9,6 +9,13 @@ export default {
     src: 'https://github.com/galax1y.png',
     alt: 'Lucas Galax1y',
   },
+  argTypes: {
+    children: {
+      control: {
+        type: 'null',
+      },
+    },
+  },
 } as Meta<AvatarProps>
 
 // variações
