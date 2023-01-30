@@ -1,4 +1,4 @@
-import { Box, BoxProps, Text } from '@galaxy-ui/react'
+import { Box, BoxProps, Text } from '@lucas-galaxy-ui/react'
 import { StoryObj, Meta } from '@storybook/react'
 
 // configuração global

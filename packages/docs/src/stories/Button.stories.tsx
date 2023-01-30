@@ -1,4 +1,4 @@
-import { Button, ButtonProps } from '@galaxy-ui/react'
+import { Button, ButtonProps } from '@lucas-galaxy-ui/react'
 import { StoryObj, Meta } from '@storybook/react'
 import { ArrowRight } from 'phosphor-react'
 

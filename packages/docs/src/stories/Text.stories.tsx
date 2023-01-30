@@ -1,4 +1,4 @@
-import { Text, TextProps } from '@galaxy-ui/react'
+import { Text, TextProps } from '@lucas-galaxy-ui/react'
 import { StoryObj, Meta } from '@storybook/react'
 
 // configuração global

@@ -1,4 +1,4 @@
-import { Box, Checkbox, CheckboxProps, Text } from '@galaxy-ui/react'
+import { Box, Checkbox, CheckboxProps, Text } from '@lucas-galaxy-ui/react'
 import { StoryObj, Meta } from '@storybook/react'
 
 export default {

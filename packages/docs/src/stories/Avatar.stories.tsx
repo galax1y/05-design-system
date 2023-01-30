@@ -1,4 +1,4 @@
-import { Avatar, AvatarProps } from '@galaxy-ui/react'
+import { Avatar, AvatarProps } from '@lucas-galaxy-ui/react'
 import { StoryObj, Meta } from '@storybook/react'
 
 // configuração global

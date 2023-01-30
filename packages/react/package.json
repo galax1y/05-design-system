@@ -1,6 +1,6 @@
 {
-	"name": "@galaxy-ui/react",
-	"version": "1.0.0",
+	"name": "@lucas-galaxy-ui/react",
+	"version": "1.1.0",
 	"description": "",
 	"main": "dist/index.js",
 	"module": "dist/index.mjs",
@@ -14,9 +14,9 @@
 	"author": "",
 	"license": "MIT",
 	"devDependencies": {
-		"@galaxy-ui/eslint-config": "*",
-		"@galaxy-ui/tokens": "*",
-		"@galaxy-ui/ts-config": "*",
+		"@lucas-galaxy-ui/eslint-config": "*",
+		"@lucas-galaxy-ui/tokens": "*",
+		"@lucas-galaxy-ui/ts-config": "*",
 		"@types/react": "^18.0.27",
 		"@types/react-dom": "^18.0.10",
 		"react": "^18.2.0",

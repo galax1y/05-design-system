@@ -1,4 +1,4 @@
-import { Box, Text, TextInput, TextInputProps } from '@galaxy-ui/react'
+import { Box, Text, TextInput, TextInputProps } from '@lucas-galaxy-ui/react'
 import { StoryObj, Meta } from '@storybook/react'
 
 // configuração global

@@ -1,4 +1,4 @@
-import { Heading, HeadingProps } from '@galaxy-ui/react'
+import { Heading, HeadingProps } from '@lucas-galaxy-ui/react'
 import { StoryObj, Meta } from '@storybook/react'
 
 // configuração global

@@ -1,5 +1,5 @@
 {
-  "name": "@galaxy-ui/docs",
+  "name": "@lucas-galaxy-ui/docs",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -27,10 +27,10 @@
     "vite": "^4.0.4"
   },
   "dependencies": {
-    "@galaxy-ui/eslint-config": "*",
-    "@galaxy-ui/react": "*",
-    "@galaxy-ui/tokens": "*",
-    "@galaxy-ui/ts-config": "*",
+    "@lucas-galaxy-ui/eslint-config": "*",
+    "@lucas-galaxy-ui/react": "*",
+    "@lucas-galaxy-ui/tokens": "*",
+    "@lucas-galaxy-ui/ts-config": "*",
     "@storybook/addon-a11y": "^6.5.15",
     "phosphor-react": "^1.4.1",
     "polished": "^4.2.2",

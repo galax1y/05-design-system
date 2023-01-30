@@ -1,4 +1,4 @@
-import { Box, MultiStep, MultiStepProps } from '@galaxy-ui/react'
+import { Box, MultiStep, MultiStepProps } from '@lucas-galaxy-ui/react'
 import { StoryObj, Meta } from '@storybook/react'
 
 export default {
