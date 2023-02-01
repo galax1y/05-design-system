@@ -1478,6 +1478,7 @@ declare const CheckboxContainer: _stitches_react_types_styled_component.StyledCo
         ignite500: string;
         ignite700: string;
         ignite900: string;
+        test: string;
     };
     fontSizes: {
         xxs: string;
@@ -2507,8 +2508,13 @@ declare const Provider: _stitches_react_types_styled_component.StyledComponent<r
 }, {}>>;
 
 interface ToastProps extends ComponentProps<typeof ToastContainer> {
+    title: string;
+    description: string;
 }
-declare function Toast(): JSX.Element;
+declare function Toast({ ...props }: ToastProps): JSX.Element;
+declare namespace Toast {
+    var displayName: string;
+}
 interface ToastProviderProps extends ComponentProps<typeof Provider> {
 }
 declare function ToastProvider({ children }: ToastProviderProps): JSX.Element;

@@ -17,6 +17,14 @@ export const ToastContainer = styled(Toast.Root, {
   display: 'flex',
   flexDirection: 'column',
   gap: '$1',
+
+  '&:focus': {
+    borderColor: '$gray200',
+  },
+
+  '&:hover': {
+    borderColor: '$gray200',
+  },
 })
 
 export const ToastHeader = styled(Toast.Title, {

@@ -3,9 +3,11 @@ import { StoryObj, Meta } from '@storybook/react'
 
 // configuração global
 export default {
-  title: "Test/Toast",
+  title: "Notifications/Toast",
   component: Toast,
   args: {
+    title: 'This is supposed to be a toast',
+    description: 'A good toast behaves correctly and does not break inside Storybook'
   },
   decorators: [
     (Story) => {

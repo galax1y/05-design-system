@@ -540,7 +540,13 @@ var ToastContainer = styled(Toast.Root, {
   listStyleType: "none",
   display: "flex",
   flexDirection: "column",
-  gap: "$1"
+  gap: "$1",
+  "&:focus": {
+    borderColor: "$gray200"
+  },
+  "&:hover": {
+    borderColor: "$gray200"
+  }
 });
 var ToastHeader = styled(Toast.Title, {
   display: "flex",
@@ -572,13 +578,14 @@ var Provider4 = styled(Toast.Provider, {});
 // src/components/Toast/index.tsx
 import { X } from "phosphor-react";
 import { jsx as jsx6, jsxs as jsxs5 } from "react/jsx-runtime";
-function Toast2() {
-  return /* @__PURE__ */ jsxs5(ToastContainer, { children: [
+function Toast2(_a) {
+  var props = __objRest(_a, []);
+  return /* @__PURE__ */ jsxs5(ToastContainer, { className: "ToastRoot", children: [
     /* @__PURE__ */ jsxs5(ToastHeader, { children: [
-      /* @__PURE__ */ jsx6(ToastTitle, { children: "Agendamento realizado" }),
-      /* @__PURE__ */ jsx6(ToastClose, { children: /* @__PURE__ */ jsx6(X, { size: 20 }) })
+      /* @__PURE__ */ jsx6(ToastTitle, { children: props.title }),
+      /* @__PURE__ */ jsx6(ToastClose, { "aria-label": "close", children: /* @__PURE__ */ jsx6(X, { size: 20 }) })
     ] }),
-    /* @__PURE__ */ jsx6(ToastDescription, { children: "Quarta-feira, 23 de Outubro \xE0s 16h" })
+    /* @__PURE__ */ jsx6(ToastDescription, { children: props.description })
   ] });
 }
 function ToastProvider({ children }) {
@@ -587,6 +594,7 @@ function ToastProvider({ children }) {
     /* @__PURE__ */ jsx6(ToastViewport, {})
   ] });
 }
+Toast2.displayName = "Toast";
 export {
   Avatar2 as Avatar,
   Box,

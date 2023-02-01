@@ -11,19 +11,22 @@ import {
 import { X } from 'phosphor-react'
 
 // prettier-ignore
-export interface ToastProps extends ComponentProps<typeof ToastContainer> { }
+export interface ToastProps extends ComponentProps<typeof ToastContainer> {
+  title: string
+  description: string
+}
 
-export function Toast() {
+export function Toast({ ...props }: ToastProps) {
   return (
-    <ToastContainer>
+    <ToastContainer className="ToastRoot">
       <ToastHeader>
-        <ToastTitle>Agendamento realizado</ToastTitle>
-        <ToastClose>
+        <ToastTitle>{props.title}</ToastTitle>
+        <ToastClose aria-label="close">
           <X size={20} />
         </ToastClose>
       </ToastHeader>
 
-      <ToastDescription>Quarta-feira, 23 de Outubro às 16h</ToastDescription>
+      <ToastDescription>{props.description}</ToastDescription>
     </ToastContainer>
   )
 }
@@ -39,3 +42,5 @@ export function ToastProvider({ children }: ToastProviderProps) {
     </Provider>
   )
 }
+
+Toast.displayName = 'Toast'

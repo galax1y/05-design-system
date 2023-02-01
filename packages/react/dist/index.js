@@ -581,7 +581,13 @@ var ToastContainer = styled(Toast.Root, {
   listStyleType: "none",
   display: "flex",
   flexDirection: "column",
-  gap: "$1"
+  gap: "$1",
+  "&:focus": {
+    borderColor: "$gray200"
+  },
+  "&:hover": {
+    borderColor: "$gray200"
+  }
 });
 var ToastHeader = styled(Toast.Title, {
   display: "flex",
@@ -613,13 +619,14 @@ var Provider4 = styled(Toast.Provider, {});
 // src/components/Toast/index.tsx
 var import_phosphor_react3 = require("phosphor-react");
 var import_jsx_runtime6 = require("react/jsx-runtime");
-function Toast2() {
-  return /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(ToastContainer, { children: [
+function Toast2(_a) {
+  var props = __objRest(_a, []);
+  return /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(ToastContainer, { className: "ToastRoot", children: [
     /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(ToastHeader, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(ToastTitle, { children: "Agendamento realizado" }),
-      /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(ToastClose, { children: /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(import_phosphor_react3.X, { size: 20 }) })
+      /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(ToastTitle, { children: props.title }),
+      /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(ToastClose, { "aria-label": "close", children: /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(import_phosphor_react3.X, { size: 20 }) })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(ToastDescription, { children: "Quarta-feira, 23 de Outubro \xE0s 16h" })
+    /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(ToastDescription, { children: props.description })
   ] });
 }
 function ToastProvider({ children }) {
@@ -628,6 +635,7 @@ function ToastProvider({ children }) {
     /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(ToastViewport, {})
   ] });
 }
+Toast2.displayName = "Toast";
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Avatar,
