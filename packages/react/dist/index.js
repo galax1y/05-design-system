@@ -63,7 +63,9 @@ __export(src_exports, {
   MultiStep: () => MultiStep,
   Text: () => Text,
   TextArea: () => TextArea,
-  TextInput: () => TextInput
+  TextInput: () => TextInput,
+  Tooltip: () => Tooltip2,
+  TooltipProvider: () => TooltipProvider
 });
 module.exports = __toCommonJS(src_exports);
 
@@ -82,7 +84,8 @@ var colors = {
   ignite300: "#00B37E",
   ignite500: "#00875F",
   ignite700: "#015F43",
-  ignite900: "#00291D"
+  ignite900: "#00291D",
+  test: "FFF"
 };
 var radii = {
   px: "1px",
@@ -525,6 +528,42 @@ function MultiStep({ size, currentStep = 1 }) {
   ] });
 }
 MultiStep.displayName = "MultiStep";
+
+// src/components/Tooltip/styles.ts
+var Tooltip = __toESM(require("@radix-ui/react-tooltip"));
+var TooltipContainer = styled(Tooltip.Root, {});
+var Provider2 = styled(Tooltip.Provider, {});
+var TooltipTrigger = styled(Tooltip.Trigger, {});
+var TooltipContent = styled(Tooltip.Content, {
+  padding: "$3 $4",
+  borderRadius: 5,
+  backgroundColor: "$gray900",
+  filter: "drop-shadow(4px 16px 24px rgba(0, 0, 0, 0.25))",
+  fontFamily: "$default",
+  fontSize: "$sm",
+  fontWeight: "$medium",
+  color: "$gray100",
+  lineHeight: "$short"
+});
+var TooltipArrow = styled(Tooltip.Arrow, {
+  fill: "$gray900"
+});
+
+// src/components/Tooltip/index.tsx
+var import_jsx_runtime5 = require("react/jsx-runtime");
+function TooltipProvider({ children }) {
+  return /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Provider2, { delayDuration: 300, skipDelayDuration: 150, children });
+}
+function Tooltip2({ children, content }) {
+  return /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(TooltipContainer, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(TooltipTrigger, { asChild: true, children }),
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(TooltipContent, { avoidCollisions: false, side: "top", children: [
+      content,
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(TooltipArrow, { width: 16, height: 8 })
+    ] })
+  ] });
+}
+Tooltip2.displayName = "Tooltip";
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Avatar,
@@ -535,5 +574,7 @@ MultiStep.displayName = "MultiStep";
   MultiStep,
   Text,
   TextArea,
-  TextInput
+  TextInput,
+  Tooltip,
+  TooltipProvider
 });
