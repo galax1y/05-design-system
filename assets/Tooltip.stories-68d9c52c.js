@@ -1,0 +1,2 @@
+import{f as r,B as i,T as e,g as s}from"./index-7bca4079.js";import{j as o}from"./jsx-runtime-1becbe17.js";import"./index-43ec82a8.js";import"./es.object.get-own-property-descriptor-037fa860.js";import"./index-648f2948.js";const m={title:"Notifications/Tooltip",component:r,args:{children:o(i,{children:o(e,{children:"This element triggers the tooltip"})}),content:"Tooltip content here."},decorators:[t=>o(s,{children:t()})]},d={},T=["Primary"];export{d as Primary,T as __namedExportsOrder,m as default};
+//# sourceMappingURL=Tooltip.stories-68d9c52c.js.map

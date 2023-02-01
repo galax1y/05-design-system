@@ -1,0 +1,2 @@
+import{d as t,e as r}from"./index-7bca4079.js";import{j as s}from"./jsx-runtime-1becbe17.js";import"./index-43ec82a8.js";import"./es.object.get-own-property-descriptor-037fa860.js";import"./index-648f2948.js";const p={title:"Notifications/Toast",component:t,args:{title:"This is supposed to be a toast",description:"A good toast behaves correctly and does not break inside Storybook"},decorators:[o=>s(r,{swipeDirection:"right",children:o()})]},c={},m=["Primary"];export{c as Primary,m as __namedExportsOrder,p as default};
+//# sourceMappingURL=Toast.stories-a906675f.js.map

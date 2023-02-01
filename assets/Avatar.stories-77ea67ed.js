@@ -1,0 +1,2 @@
+import{A as a}from"./index-7bca4079.js";import"./index-43ec82a8.js";import"./es.object.get-own-property-descriptor-037fa860.js";import"./index-648f2948.js";import"./jsx-runtime-1becbe17.js";const l={title:"Data display/Avatar",component:a,args:{src:"https://github.com/galax1y.png",alt:"Lucas Galax1y"},argTypes:{children:{control:{type:"null"}}}},c={},p={args:{src:void 0}},m=["Primary","WithFallback"];export{c as Primary,p as WithFallback,m as __namedExportsOrder,l as default};
+//# sourceMappingURL=Avatar.stories-77ea67ed.js.map
