@@ -3,7 +3,7 @@ import { StoryObj, Meta } from '@storybook/react'
 
 // configuração global
 export default {
-  title: "Test/Tooltip",
+  title: "Notifications/Tooltip",
   component: Tooltip,
   args: {
     children:
