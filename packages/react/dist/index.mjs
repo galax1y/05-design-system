@@ -46,7 +46,7 @@ var colors = {
   ignite500: "#00875F",
   ignite700: "#015F43",
   ignite900: "#00291D",
-  test: "FFF"
+  test: "#FFF"
 };
 var radii = {
   px: "1px",
@@ -525,6 +525,68 @@ function Tooltip2({ children, content }) {
   ] });
 }
 Tooltip2.displayName = "Tooltip";
+
+// src/components/Toast/styles.ts
+import * as Toast from "@radix-ui/react-toast";
+var ToastContainer = styled(Toast.Root, {
+  maxWidth: 360,
+  minHeight: 82,
+  backgroundColor: "$gray800",
+  border: "1px solid $gray600",
+  boxSizing: "border-box",
+  fontFamily: "$default",
+  padding: "$3 $5",
+  borderRadius: "$sm",
+  listStyleType: "none",
+  display: "flex",
+  flexDirection: "column",
+  gap: "$1"
+});
+var ToastHeader = styled(Toast.Title, {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-between"
+});
+var ToastTitle = styled("h1", {
+  margin: 0,
+  fontSize: "$xl",
+  fontWeight: "$bold",
+  color: "$white",
+  lineHeight: "$base"
+});
+var ToastDescription = styled(Toast.Description, {
+  fontSize: "$sm",
+  fontWeight: "$regular",
+  color: "$gray200"
+});
+var ToastClose = styled(Toast.Close, {
+  all: "unset",
+  width: "$5",
+  height: "$5",
+  cursor: "pointer",
+  color: "$gray200"
+});
+var ToastViewport = styled(Toast.Viewport, {});
+var Provider4 = styled(Toast.Provider, {});
+
+// src/components/Toast/index.tsx
+import { X } from "phosphor-react";
+import { jsx as jsx6, jsxs as jsxs5 } from "react/jsx-runtime";
+function Toast2() {
+  return /* @__PURE__ */ jsxs5(ToastContainer, { children: [
+    /* @__PURE__ */ jsxs5(ToastHeader, { children: [
+      /* @__PURE__ */ jsx6(ToastTitle, { children: "Agendamento realizado" }),
+      /* @__PURE__ */ jsx6(ToastClose, { children: /* @__PURE__ */ jsx6(X, { size: 20 }) })
+    ] }),
+    /* @__PURE__ */ jsx6(ToastDescription, { children: "Quarta-feira, 23 de Outubro \xE0s 16h" })
+  ] });
+}
+function ToastProvider({ children }) {
+  return /* @__PURE__ */ jsxs5(Provider4, { children: [
+    children,
+    /* @__PURE__ */ jsx6(ToastViewport, {})
+  ] });
+}
 export {
   Avatar2 as Avatar,
   Box,
@@ -535,6 +597,8 @@ export {
   Text,
   TextArea,
   TextInput,
+  Toast2 as Toast,
+  ToastProvider,
   Tooltip2 as Tooltip,
   TooltipProvider
 };

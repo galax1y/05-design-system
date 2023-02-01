@@ -64,6 +64,8 @@ __export(src_exports, {
   Text: () => Text,
   TextArea: () => TextArea,
   TextInput: () => TextInput,
+  Toast: () => Toast2,
+  ToastProvider: () => ToastProvider,
   Tooltip: () => Tooltip2,
   TooltipProvider: () => TooltipProvider
 });
@@ -85,7 +87,7 @@ var colors = {
   ignite500: "#00875F",
   ignite700: "#015F43",
   ignite900: "#00291D",
-  test: "FFF"
+  test: "#FFF"
 };
 var radii = {
   px: "1px",
@@ -564,6 +566,68 @@ function Tooltip2({ children, content }) {
   ] });
 }
 Tooltip2.displayName = "Tooltip";
+
+// src/components/Toast/styles.ts
+var Toast = __toESM(require("@radix-ui/react-toast"));
+var ToastContainer = styled(Toast.Root, {
+  maxWidth: 360,
+  minHeight: 82,
+  backgroundColor: "$gray800",
+  border: "1px solid $gray600",
+  boxSizing: "border-box",
+  fontFamily: "$default",
+  padding: "$3 $5",
+  borderRadius: "$sm",
+  listStyleType: "none",
+  display: "flex",
+  flexDirection: "column",
+  gap: "$1"
+});
+var ToastHeader = styled(Toast.Title, {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-between"
+});
+var ToastTitle = styled("h1", {
+  margin: 0,
+  fontSize: "$xl",
+  fontWeight: "$bold",
+  color: "$white",
+  lineHeight: "$base"
+});
+var ToastDescription = styled(Toast.Description, {
+  fontSize: "$sm",
+  fontWeight: "$regular",
+  color: "$gray200"
+});
+var ToastClose = styled(Toast.Close, {
+  all: "unset",
+  width: "$5",
+  height: "$5",
+  cursor: "pointer",
+  color: "$gray200"
+});
+var ToastViewport = styled(Toast.Viewport, {});
+var Provider4 = styled(Toast.Provider, {});
+
+// src/components/Toast/index.tsx
+var import_phosphor_react3 = require("phosphor-react");
+var import_jsx_runtime6 = require("react/jsx-runtime");
+function Toast2() {
+  return /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(ToastContainer, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(ToastHeader, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(ToastTitle, { children: "Agendamento realizado" }),
+      /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(ToastClose, { children: /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(import_phosphor_react3.X, { size: 20 }) })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(ToastDescription, { children: "Quarta-feira, 23 de Outubro \xE0s 16h" })
+  ] });
+}
+function ToastProvider({ children }) {
+  return /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(Provider4, { children: [
+    children,
+    /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(ToastViewport, {})
+  ] });
+}
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Avatar,
@@ -575,6 +639,8 @@ Tooltip2.displayName = "Tooltip";
   Text,
   TextArea,
   TextInput,
+  Toast,
+  ToastProvider,
   Tooltip,
   TooltipProvider
 });
